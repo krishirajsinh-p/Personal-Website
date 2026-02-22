@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<meta
+			name="description"
+			content="Krishirajsinh Puwar – Computer Science Engineering student at Technical University of Munich (TUM). A Programmer, Tech enthusiast, and problem solver with experience in Software Engineering, DevOps, cloud-native systems, platform engineering, Computer Networking, Cybersecurity, Data Science and Generative AI."
+		/>
+		<meta
+			name="keywords"
+			content="Krishirajsinh Puwar, Software Engineer, Information Engineering, Computer Science, Heilbronn, Germany, TUM, Technical University of Munich, Computer Networking, DevOps, Cloud, AI, Portfolio, Resume, CV, Python, Go, C, C++, Java, Kubernetes, Docker, Platform Engineering, IT Security, Data Science, Generative AI, Cybersecurity, Software Development, Tech Enthusiast, Problem Solver, Multitasker, Quick Learner, Computer Science Student, Software Engineering Student, Computer Science Portfolio, Software Engineer Portfolio"
+		/>
+		<meta name="author" content="Krishirajsinh Puwar" />
+		<meta name="robots" content="index, follow" />
+		<meta name="theme-color" content="#000000" />
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta
+			property="og:title"
+			content="Krishirajsinh Puwar | Software Engineer & CS Student"
+		/>
+		<meta
+			property="og:description"
+			content="Mobile portfolio of Krishirajsinh Puwar – Computer Science Engineering student at Technical University of Munich (TUM). Tech enthusiast and problem solver with experience in Software Engineering, DevOps, cloud-native systems, platform engineering, Computer Networking, Cybersecurity, Data Science and Generative AI."
+		/>
+		<meta property="og:type" content="website" />
+		<meta
+			property="og:url"
+			content="https://krishirajsinh-puwar.42web.io/"
+		/>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<title>Krishirajsinh Puwar</title>
+		<link rel="shortcut icon" href="./software-engineer.png" />
+
+		<link rel="stylesheet" href="mobile-styles.css" />
+		<script src="detection.js"></script>
+	</head>
+
+	<body>
+		<div class="app">
+
+			<!-- Header -->
+			<!-- <header class="app-header">
+				<div class="header-avatar">KP</div>
+				<div class="header-info">
+					<div class="header-name">Krishirajsinh Puwar</div>
+					<div class="header-role">Software Engineer &amp; CS Student</div>
+				</div>
+				<button class="header-toggle" onclick="window.setViewPreference('desktop'); return false;">Desktop</button>
+			</header> -->
+
+			<!-- Icon Grid -->
+			<div class="icon-grid">
+				<div class="app-icon" onclick="openSection('cv')">
+					<div class="icon-bg icon-blue">📃</div>
+					<span class="icon-label">CV</span>
+				</div>
+
+				<div class="app-icon" onclick="openSection('profile')">
+					<div class="icon-bg icon-indigo">👤</div>
+					<span class="icon-label">Profile</span>
+				</div>
+
+				<div class="app-icon" onclick="openSection('experience')">
+					<div class="icon-bg icon-orange">💼</div>
+					<span class="icon-label">Experience</span>
+				</div>
+
+				<div class="app-icon" onclick="openSection('education')">
+					<div class="icon-bg icon-green">🎓</div>
+					<span class="icon-label">Education</span>
+				</div>
+
+				<div class="app-icon" onclick="openSection('skills')">
+					<div class="icon-bg icon-teal">🛠️</div>
+					<span class="icon-label">Skills</span>
+				</div>
+
+				<div class="app-icon" onclick="openSection('projects')">
+					<div class="icon-bg icon-red">🏗️</div>
+					<span class="icon-label">Projects</span>
+				</div>
+
+				<div class="app-icon" onclick="openSection('certificates')">
+					<div class="icon-bg icon-amber">📜</div>
+					<span class="icon-label">Certificates</span>
+				</div>
+
+				<div class="app-icon" onclick="openSection('hackathons')">
+					<div class="icon-bg icon-violet">💡</div>
+					<span class="icon-label">Hackathons</span>
+				</div>
+
+				<div class="app-icon" onclick="openSection('contact')">
+					<div class="icon-bg icon-cyan">🌐</div>
+					<span class="icon-label">Contact</span>
+				</div>
+			</div>
+
+		</div><!-- /.app -->
+
+		<!-- Bottom Sheet -->
+		<div class="sheet" id="content-modal">
+			<div class="sheet-handle-bar"><span></span></div>
+			<div class="sheet-header">
+				<div class="sheet-title">
+					<span class="sheet-title-icon" id="modal-icon"></span>
+					<span id="modal-title"></span>
+				</div>
+				<button class="sheet-close" onclick="closeSection()">
+					<span class="sheet-close-x"></span>
+				</button>
+			</div>
+			<div class="sheet-body" id="modal-content"></div>
+		</div>
+		<div class="sheet-backdrop" id="modal-backdrop" onclick="closeSection()"></div>
+
+		<!-- Content Templates -->
+
+		<template id="cv-content">
+			<div class="cv-block">
+				<a class="cv-row" href="./CV_Krishirajsinh_Puwar.pdf" download>
+					<span class="cv-row-icon">↓</span>
+					<span class="cv-row-text">Download CV (PDF)</span>
+					<span class="cv-row-chevron">›</span>
+				</a>
+			</div>
+			<p class="prose-body" style="margin-top:16px;">
+				Tap above to download the full CV. The desktop version includes an inline PDF viewer.
+			</p>
+		</template>
+
+		<template id="profile-content">
+			<p class="prose-body">
+				<strong>Computer Science Engineering student</strong> at the Technical University of Munich (TUM).
+			</p>
+			<p class="prose-body">
+				Programmer, tech enthusiast and problem solver with hands-on experience in Software Engineering, DevOps, cloud-native systems, platform engineering, computer networking, cybersecurity, data science and generative AI.
+			</p>
+			<p class="prose-label" style="margin-top:20px;">Traits</p>
+			<ul class="trait-list">
+				<li class="trait">Programmer</li>
+				<li class="trait">Tech enthusiast</li>
+				<li class="trait">Problem solver</li>
+				<li class="trait">Multitasker</li>
+				<li class="trait">Quick learner</li>
+				<li class="trait">Self-motivated</li>
+			</ul>
+		</template>
+
+		<template id="experience-content">
+			<div class="timeline">
+
+				<a class="timeline-entry" href="https://www.ce.cit.tum.de/hndss/teaching/ws-25/computer-networking-and-it-security-inhn0012/" target="_blank">
+					<div class="timeline-aside">
+						<div class="timeline-dot"></div>
+						<div class="timeline-line"></div>
+					</div>
+					<div class="timeline-main">
+						<div class="timeline-date">Oct 2025 – Mar 2026</div>
+						<div class="timeline-title">Tutor – Computer Networking &amp; IT Security</div>
+						<div class="timeline-org">Technical University of Munich</div>
+						<p class="timeline-desc">Teaching and mentoring students in computer networking and IT security principles.</p>
+					</div>
+				</a>
+
+				<a class="timeline-entry" href="https://it.schwarz/en/about-us" target="_blank">
+					<div class="timeline-aside">
+						<div class="timeline-dot"></div>
+						<div class="timeline-line"></div>
+					</div>
+					<div class="timeline-main">
+						<div class="timeline-date">Aug 2024 – Sep 2025</div>
+						<div class="timeline-title">Werkstudent – Platform Engineering</div>
+						<div class="timeline-org">Schwarz IT KG, Neckarsulm</div>
+						<p class="timeline-desc">Worked on platform engineering solutions and cloud infrastructure optimization.</p>
+					</div>
+				</a>
+
+				<a class="timeline-entry" href="https://www.ce.cit.tum.de/hndss/teaching/ss-24/ilab-inhn0021-inhn4053/" target="_blank">
+					<div class="timeline-aside">
+						<div class="timeline-dot"></div>
+						<div class="timeline-line"></div>
+					</div>
+					<div class="timeline-main">
+						<div class="timeline-date">Apr 2024 – Aug 2024</div>
+						<div class="timeline-title">Tutor – Advanced Practical Lab in Computer Networking</div>
+						<div class="timeline-org">Technical University of Munich</div>
+						<p class="timeline-desc">Guided students through advanced networking concepts and hands-on labs.</p>
+					</div>
+				</a>
+
+				<a class="timeline-entry" href="https://www.diveinsight.me/" target="_blank">
+					<div class="timeline-aside">
+						<div class="timeline-dot"></div>
+						<div class="timeline-line"></div>
+					</div>
+					<div class="timeline-main">
+						<div class="timeline-date">Mar 2024 – Jun 2024</div>
+						<div class="timeline-title">Co-Founder</div>
+						<div class="timeline-org">DiveInsight, Heilbronn</div>
+						<p class="timeline-desc">Co-founded and built a tech startup focused on innovative solutions.</p>
+					</div>
+				</a>
+
+				<a class="timeline-entry" href="https://net.in.tum.de/teaching/ss23/ilab_information.html" target="_blank">
+					<div class="timeline-aside">
+						<div class="timeline-dot"></div>
+						<div class="timeline-line"></div>
+					</div>
+					<div class="timeline-main">
+						<div class="timeline-date">Aug 2023 – Feb 2024</div>
+						<div class="timeline-title">iLab Internship – Building my Own Internet</div>
+						<div class="timeline-org">Technical University of Munich</div>
+						<p class="timeline-desc">Developed networking knowledge through a practical internet infrastructure project.</p>
+					</div>
+				</a>
+
+			</div>
+		</template>
+
+		<template id="education-content">
+			<div class="timeline">
+
+				<a class="timeline-entry" href="https://www.chn.tum.de/study-programs/bachelor-in-information-engineering" target="_blank">
+					<div class="timeline-aside">
+						<div class="timeline-dot"></div>
+						<div class="timeline-line"></div>
+					</div>
+					<div class="timeline-main">
+						<div class="timeline-date">Oct 2021 – Current</div>
+						<div class="timeline-title">B.Sc. Information Engineering</div>
+						<div class="timeline-org">Technical University of Munich, Heilbronn Campus</div>
+					</div>
+				</a>
+
+				<a class="timeline-entry" href="https://www.42heilbronn.de/en/" target="_blank">
+					<div class="timeline-aside">
+						<div class="timeline-dot"></div>
+						<div class="timeline-line"></div>
+					</div>
+					<div class="timeline-main">
+						<div class="timeline-date">Oct 2022 – Mar 2024</div>
+						<div class="timeline-title">Computer Science</div>
+						<div class="timeline-org">42 Heilbronn (Project-based learning)</div>
+					</div>
+				</a>
+
+				<a class="timeline-entry" href="https://ahduni.edu.in/majors/computer-science/" target="_blank">
+					<div class="timeline-aside">
+						<div class="timeline-dot"></div>
+						<div class="timeline-line"></div>
+					</div>
+					<div class="timeline-main">
+						<div class="timeline-date">Sep 2020 – Sep 2021</div>
+						<div class="timeline-title">B.Sc. Computer Science</div>
+						<div class="timeline-org">Ahmedabad University, India</div>
+					</div>
+				</a>
+
+			</div>
+		</template>
+
+		<template id="skills-content">
+			<div class="tag-group">
+				<p class="prose-label">Programming Languages</p>
+				<div class="tag-set">
+					<span class="tag">Python</span>
+					<span class="tag">Go</span>
+					<span class="tag">C / C++ / C#</span>
+					<span class="tag">Java</span>
+					<span class="tag">HTML5 / CSS3</span>
+					<span class="tag">JavaScript</span>
+					<span class="tag">Bash</span>
+				</div>
+			</div>
+			<div class="tag-group">
+				<p class="prose-label">Tools &amp; Platforms</p>
+				<div class="tag-set">
+					<span class="tag">Git / GitHub</span>
+					<span class="tag">Linux</span>
+					<span class="tag">Docker</span>
+					<span class="tag">Kubernetes</span>
+					<span class="tag">Kustomize</span>
+					<span class="tag">Terraform</span>
+					<span class="tag">Azure</span>
+					<span class="tag">VS Code</span>
+					<span class="tag">IntelliJ IDEA</span>
+					<span class="tag">GoLand</span>
+					<span class="tag">Jupyter</span>
+				</div>
+			</div>
+			<div class="tag-group">
+				<p class="prose-label">Technical Domains</p>
+				<div class="tag-set">
+					<span class="tag">Web Development</span>
+					<span class="tag">Software Engineering</span>
+					<span class="tag">DevOps</span>
+					<span class="tag">Computer Networking</span>
+					<span class="tag">IT Security</span>
+					<span class="tag">Data Science</span>
+					<span class="tag">Generative AI</span>
+				</div>
+			</div>
+		</template>
+
+		<template id="projects-content">
+			<div class="project-list">
+
+				<a class="project-card" href="https://web-boost.vercel.app/" target="_blank">
+					<div class="project-title-row">
+						<span class="project-name">WebBoost</span>
+						<span class="project-arrow">›</span>
+					</div>
+					<p class="project-desc">A blog analysing tool that scans your blog and scores content, UX and SEO in one place — with a clear report of actionable insights.</p>
+				</a>
+
+				<a class="project-card" href="https://mediasleuth360.infinityfreeapp.com/" target="_blank">
+					<div class="project-title-row">
+						<span class="project-name">MediaSleuth360</span>
+						<span class="project-arrow">›</span>
+					</div>
+					<p class="project-desc">AI-powered web app that enhances media content interaction through a chatbot interface, providing timestamps and eliminating manual searching.</p>
+				</a>
+
+			</div>
+			<p class="prose-body" style="margin-top:12px; font-style:italic;">More projects coming soon…</p>
+		</template>
+
+		<template id="certificates-content">
+			<div class="cert-block">
+
+				<a class="cert-item" href="https://krishirajsinh-puwar.42web.io/AI-microclass-cert-Krishirajshinh-Puwar.pdf" target="_blank">
+					<div class="cert-text">
+						<span>AI Microclasses – How to Master Generative AI Like a Pro</span>
+					</div>
+					<span class="cert-chevron">›</span>
+				</a>
+
+				<a class="cert-item" href="https://courses.edx.org/certificates/e932cb33a35c49d68d591180c5864901" target="_blank">
+					<div class="cert-text">
+						<span>AI for Everyone: Master the Basics</span>
+						<span class="cert-src">edX</span>
+					</div>
+					<span class="cert-chevron">›</span>
+				</a>
+
+				<a class="cert-item" href="https://courses.edx.org/certificates/a5ad1fb236be4dfe81f2113d454f5a74" target="_blank">
+					<div class="cert-text">
+						<span>Introduction to Cloud Computing</span>
+						<span class="cert-src">edX</span>
+					</div>
+					<span class="cert-chevron">›</span>
+				</a>
+
+				<a class="cert-item" href="https://courses.edx.org/certificates/22c818ac09b24380aa2648baf4562151" target="_blank">
+					<div class="cert-text">
+						<span>Introduction to Linux</span>
+						<span class="cert-src">edX</span>
+					</div>
+					<span class="cert-chevron">›</span>
+				</a>
+
+				<a class="cert-item" href="https://courses.edx.org/certificates/3fc72911ef18479abae2246c2bdd2088" target="_blank">
+					<div class="cert-text">
+						<span>Cybersecurity Basics</span>
+						<span class="cert-src">edX</span>
+					</div>
+					<span class="cert-chevron">›</span>
+				</a>
+
+				<a class="cert-item" href="https://courses.edx.org/certificates/c0ff079c130e436bac5a6cdcb186fbcd" target="_blank">
+					<div class="cert-text">
+						<span>Cloud Development with HTML, CSS &amp; JavaScript</span>
+						<span class="cert-src">edX</span>
+					</div>
+					<span class="cert-chevron">›</span>
+				</a>
+
+				<a class="cert-item" href="https://courses.edx.org/certificates/d4cdd8b4777649748ed891184c3becee" target="_blank">
+					<div class="cert-text">
+						<span>Developing Cloud Applications with Node.js and React</span>
+						<span class="cert-src">edX</span>
+					</div>
+					<span class="cert-chevron">›</span>
+				</a>
+
+				<a class="cert-item" href="https://courses.edx.org/certificates/93f59151fcc249729932428f6f7320cb" target="_blank">
+					<div class="cert-text">
+						<span>Developing Cloud Native Applications</span>
+						<span class="cert-src">edX</span>
+					</div>
+					<span class="cert-chevron">›</span>
+				</a>
+
+				<a class="cert-item" href="https://courses.edx.org/certificates/b4935fa86e6144c48e5233bcae4f8d9d" target="_blank">
+					<div class="cert-text">
+						<span>Introduction to Data Science</span>
+						<span class="cert-src">edX</span>
+					</div>
+					<span class="cert-chevron">›</span>
+				</a>
+
+				<a class="cert-item" href="https://courses.edx.org/certificates/d2c5148cbb704c869ca817bbf81c52aa" target="_blank">
+					<div class="cert-text">
+						<span>Data Science Tools</span>
+						<span class="cert-src">edX</span>
+					</div>
+					<span class="cert-chevron">›</span>
+				</a>
+
+				<a class="cert-item" href="https://courses.edx.org/certificates/b2a924a302e74a138e5fac4d57702357" target="_blank">
+					<div class="cert-text">
+						<span>Python Basics for Data Science</span>
+						<span class="cert-src">edX</span>
+					</div>
+					<span class="cert-chevron">›</span>
+				</a>
+
+				<a class="cert-item" href="https://courses.edx.org/certificates/4005465d2c504a279243ca0ddbc5af24" target="_blank">
+					<div class="cert-text">
+						<span>Blockchain Uses and Implications</span>
+						<span class="cert-src">edX</span>
+					</div>
+					<span class="cert-chevron">›</span>
+				</a>
+
+				<a class="cert-item" href="https://www.linkedin.com/feed/update/urn:li:activity:7181878891353903104/" target="_blank">
+					<div class="cert-text">
+						<span>AI Start</span>
+						<span class="cert-src">LinkedIn</span>
+					</div>
+					<span class="cert-chevron">›</span>
+				</a>
+
+			</div>
+		</template>
+
+		<template id="hackathons-content">
+			<p class="prose-body" style="margin-bottom:16px;">
+				Participated in multiple hackathons and tech events. Each LinkedIn post has the full story.
+			</p>
+			<div class="hackathon-list">
+
+				<a class="hackathon-item" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7403125349741473792" target="_blank">
+					<span class="hackathon-num">01</span>
+					<div>
+						<div class="hackathon-title">Hackathon 1</div>
+						<div class="hackathon-sub">View on LinkedIn ›</div>
+					</div>
+				</a>
+
+				<a class="hackathon-item" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7178263312009162753" target="_blank">
+					<span class="hackathon-num">02</span>
+					<div>
+						<div class="hackathon-title">Hackathon 2</div>
+						<div class="hackathon-sub">View on LinkedIn ›</div>
+					</div>
+				</a>
+
+				<a class="hackathon-item" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7264531027262427138" target="_blank">
+					<span class="hackathon-num">03</span>
+					<div>
+						<div class="hackathon-title">Hackathon 3</div>
+						<div class="hackathon-sub">View on LinkedIn ›</div>
+					</div>
+				</a>
+
+			</div>
+		</template>
+
+		<template id="contact-content">
+			<div class="contact-block">
+
+				<a class="contact-item" href="https://www.linkedin.com/in/krishirajsinh-p" target="_blank">
+					<span class="contact-icon-bg ci-blue">in</span>
+					<div class="contact-info">
+						<span class="contact-label">LinkedIn</span>
+						<span class="contact-handle">@krishirajsinh-p</span>
+					</div>
+					<span class="cert-chevron">›</span>
+				</a>
+
+				<a class="contact-item" href="https://github.com/krishirajsinh-p" target="_blank">
+					<span class="contact-icon-bg ci-gray">gh</span>
+					<div class="contact-info">
+						<span class="contact-label">GitHub</span>
+						<span class="contact-handle">@krishirajsinh-p</span>
+					</div>
+					<span class="cert-chevron">›</span>
+				</a>
+
+				<a class="contact-item" href="https://www.instagram.com/krishirajsinhpuwar/" target="_blank">
+					<span class="contact-icon-bg ci-pink">ig</span>
+					<div class="contact-info">
+						<span class="contact-label">Instagram</span>
+						<span class="contact-handle">@krishirajsinhpuwar</span>
+					</div>
+					<span class="cert-chevron">›</span>
+				</a>
+
+				<a class="contact-item" href="mailto:krishirajsinh1505puwar@gmail.com">
+					<span class="contact-icon-bg ci-red">✉</span>
+					<div class="contact-info">
+						<span class="contact-label">Email</span>
+						<span class="contact-handle">krishirajsinh1505puwar@gmail.com</span>
+					</div>
+					<span class="cert-chevron">›</span>
+				</a>
+
+			</div>
+		</template>
+
+		<script src="mobile-script.js"></script>
+	</body>
+</html>
