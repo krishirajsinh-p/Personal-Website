@@ -1,15 +1,15 @@
 // Mobile Script - Handle app icon interactions and bottom sheet display
 
 const SECTIONS = {
-	cv:           { icon: "📃", title: "CV" },
-	profile:      { icon: "👤", title: "Profile" },
-	experience:   { icon: "💼", title: "Experience" },
-	education:    { icon: "🎓", title: "Education" },
-	skills:       { icon: "🛠️", title: "Skills" },
-	projects:     { icon: "🏗️", title: "Projects" },
+	cv: { icon: "📃", title: "CV" },
+	profile: { icon: "👤", title: "Profile" },
+	experience: { icon: "💼", title: "Experience" },
+	education: { icon: "🎓", title: "Education" },
+	skills: { icon: "🛠️", title: "Skills" },
+	projects: { icon: "🏗️", title: "Projects" },
 	certificates: { icon: "📜", title: "Certificates" },
-	hackathons:   { icon: "💡", title: "Hackathons" },
-	contact:      { icon: "🌐", title: "Contact" },
+	hackathons: { icon: "💡", title: "Hackathons" },
+	contact: { icon: "🌐", title: "Contact" },
 };
 
 function openSection(sectionId) {
@@ -28,7 +28,7 @@ function openSection(sectionId) {
 	sheetBody.appendChild(template.content.cloneNode(true));
 
 	// Open sheet
-	const sheet   = document.getElementById("content-modal");
+	const sheet = document.getElementById("content-modal");
 	const backdrop = document.getElementById("modal-backdrop");
 	sheet.classList.add("open");
 	backdrop.classList.add("open");
@@ -44,7 +44,7 @@ function openSection(sectionId) {
 }
 
 function closeSection() {
-	const sheet    = document.getElementById("content-modal");
+	const sheet = document.getElementById("content-modal");
 	const backdrop = document.getElementById("modal-backdrop");
 	sheet.classList.remove("open");
 	backdrop.classList.remove("open");

@@ -1,5 +1,5 @@
 // Mobile Device Detection & Routing
-(function() {
+(function () {
 	// Check if device is mobile or tablet
 	function isMobileDevice() {
 		// Check viewport width first (mobile-first)
@@ -61,7 +61,7 @@
 	}
 
 	// Set view preference and reload
-	window.setViewPreference = function(preference) {
+	window.setViewPreference = function (preference) {
 		localStorage.setItem("viewPreference", preference);
 		routeUser();
 	};
