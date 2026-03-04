@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
 	<head>
+		<script src="script.js"></script>
+
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -215,82 +217,75 @@
 						</div>
 
 						<div
-							id="profile-content"
-							style="display: none; margin-top: 20px"
+							style="
+								margin-top: 30px;
+								border: 1px dashed var(--border-color);
+								padding: 20px;
+								border-radius: 8px;
+							"
 						>
-							<div
+							<h3 style="color: #c10000">{</h3>
+							<ul
 								style="
-									margin-top: 30px;
-									border: 1px dashed var(--border-color);
-									padding: 20px;
-									border-radius: 8px;
+									list-style: none;
+									padding-left: 20px;
+									color: #c10000;
 								"
 							>
-								<h3 style="color: #c10000">{</h3>
-								<ul
-									style="
-										list-style: none;
-										padding-left: 20px;
-										color: #c10000;
-									"
-								>
-									<li>
-										<span class="key">"Name"</span>:
+								<li>
+									<span class="key">"Name"</span>:
+									<span class="value"
+										>"Krishirajsinh Puwar"</span
+									>,
+								</li>
+								<br />
+								<li>
+									<span class="key">"About me"</span>:
+									<span class="value"
+										>"I am a Computer Science Engineering
+										student currently studying at Technical
+										University of Munich with a passion for
+										coding and technology. I enjoy turning
+										coffee into elegant lines of code,
+										seamlessly juggling multiple tasks, and
+										effortlessly adapting to the syntax of
+										any programming language."</span
+									>,
+								</li>
+								<br />
+								<li>
+									<span class="key">"Traits"</span>: [<br />
+									&nbsp;&nbsp;<span class="value"
+										>"Programmer"</span
+									>,<br />
+									&nbsp;&nbsp;<span class="value"
+										>"Problem Solver"</span
+									>,<br />
+									&nbsp;&nbsp;<span class="value"
+										>"Tech Enthusiast"</span
+									>,<br />
+									&nbsp;&nbsp;<span class="value"
+										>"Multitasker"</span
+									>,<br />
+									&nbsp;&nbsp;<span class="value"
+										>"Quick and Adaptable Learner"</span
+									><br />
+									],
+								</li>
+								<br />
+								<li>
+									<span class="key">"Contact"</span>:
+									<a
+										href="#"
+										onclick="showSection('contact')"
+									>
 										<span class="value"
-											>"Krishirajsinh Puwar"</span
-										>,
-									</li>
-									<br />
-									<li>
-										<span class="key">"About me"</span>:
-										<span class="value"
-											>"I am a Computer Science
-											Engineering student currently
-											studying at Technical University of
-											Munich with a passion for coding and
-											technology. I enjoy turning coffee
-											into elegant lines of code,
-											seamlessly juggling multiple tasks,
-											and effortlessly adapting to the
-											syntax of any programming
-											language."</span
-										>,
-									</li>
-									<br />
-									<li>
-										<span class="key">"Traits"</span>: [<br />
-										&nbsp;&nbsp;<span class="value"
-											>"Programmer"</span
-										>,<br />
-										&nbsp;&nbsp;<span class="value"
-											>"Problem Solver"</span
-										>,<br />
-										&nbsp;&nbsp;<span class="value"
-											>"Tech Enthusiast"</span
-										>,<br />
-										&nbsp;&nbsp;<span class="value"
-											>"Multitasker"</span
-										>,<br />
-										&nbsp;&nbsp;<span class="value"
-											>"Quick and Adaptable Learner"</span
-										><br />
-										],
-									</li>
-									<br />
-									<li>
-										<span class="key">"Contact"</span>:
-										<a
-											href="#"
-											onclick="showSection('contact')"
+											>"see contact.info"</span
 										>
-											<span class="value"
-												>"see contact.info"</span
-											>
-										</a>
-									</li>
-								</ul>
-								<h3 style="color: #c10000">}</h3>
-							</div>
+									</a>
+								</li>
+							</ul>
+							<h3 style="color: #c10000">}</h3>
 						</div>
 					</div>
 
@@ -824,7 +819,5 @@
 				</div>
 			</div>
 		</div>
-
-		<script src="script.js"></script>
 	</body>
 </html>

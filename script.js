@@ -16,4 +16,6 @@ function showSection(sectionId) {
 	event.currentTarget.classList.add("active");
 }
 
-document.getElementById("profile-content").style.display = "block";
+window.onload = function() {
+	showSection('profile'); // Show home section by default
+};
