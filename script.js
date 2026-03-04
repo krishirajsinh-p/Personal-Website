@@ -16,22 +16,6 @@ function showSection(sectionId) {
 	event.currentTarget.classList.add("active");
 }
 
-// Typewriter Effect
-const text = "cat profile.json";
-const speed = 50; // ms per char
-let i = 0;
-
-function typeWriter() {
-	if (i < text.length) {
-		document.getElementById("typewriter").innerHTML += text.charAt(i);
-		i++;
-		setTimeout(typeWriter, speed);
-	} else {
-		setTimeout(() => {
-			document.getElementById("profile-content").style.display = "block";
-		}, 500);
-	}
-}
-
-// Start typing on load
-window.onload = typeWriter;
+window.onload = function() {
+	showSection('profile'); // Show home section by default
+};
